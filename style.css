@@ -2,10 +2,10 @@ body {
   background-color: white;
 }
 
-.color, .pixel {
+.color , .pixel {
   width: 40px;
   height: 40px;
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid black;
   display: inline-block;
 }
 
