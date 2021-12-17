@@ -6,14 +6,18 @@
         <link rel="stylesheet" href="style.css">
     <body>
         <h1 id='title'>Paleta de Cores</h1>
-        <section id='color-palette'>
-            <div class='selected color priCard'></div>
-            <div class='color secCard'></div>
-            <div class='color tercCard'></div>
-            <div class='color quatCard'></div>
+         <section id='color-palette'>
+            <div class='selected color' id='priCard'></div>
+            <div class='color' id='segCard'></div>
+            <div class='color' id='tercCard'></div>
+            <div class='color' id='quatCard'></div>
         </section>
-        <div id="pixel-board">
-        </div>
+        <!-- Andamento -->
+        <input type="text" id="board-size" placeholder="Informe o número de pixels, de 5 a 50" size="27"/>
+        <button id='generate-board' onClick='teste()'>VQV</button>
+        <!-- . -->
+        <button id='clear-board' onClick='limpa()'>Limpar</button>
+         <div id='pixel-board'></div>
         <script src='script.js'></script>
     </body>
 </html>

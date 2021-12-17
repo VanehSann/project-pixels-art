@@ -10,9 +10,18 @@ body {
 }
 
 .pixel {
-  margin-top: -4px;
+  background: white;
+  margin-top: -5px;
+  margin-left: -1px;
 }
 
 #pixel-board {
-  margin-top: 5px;
+  margin-top: 9px;
+}
+
+.pixels {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  display: inline-block;
 }
