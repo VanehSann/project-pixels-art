@@ -27,71 +27,7 @@ tercCard.onclick = function unnamed() {
 quatCard.onclick = function unnamed() {
   pixelCores = 'orange';
 };
-// Incompleto para os bonus
-function removeBoard() {
-  const visibles = document.querySelectorAll('#linha');
-  
-   for (let i = 0; i < visibles.length; i += 1) {
-    visibles[i].remove();
-  }
-  }
-
-// 
-const boardSize = document.getElementById('board-size');
-// console.log(boardSize.value);
-// let valorDoGerador = boardSize.value;
-let lin = Number(boardSize.value);
-function boardValidation() {
-  const visible = document.querySelectorAll('.visible');
-  for (let i = 0; i < visible.length; i += 1) {
-    visible[i].remove();
-  }
-  const boardSize = document.getElementById('board-size');
- let lin = Number(boardSize.value);
-if(boardSize.value == '') {
-alert('Board Inválido!')
-} 
-else {
-   if(boardSize.value > 0 && boardSize.value <= 50){
- removeBoard();
-     lin = Number(boardSize.value);
-    }
-    if(boardSize.value > 50) {
-removeBoard();
-       lin = 50;
-    }
-    if(boardSize.value < 5) {
-  removeBoard();
-       lin = 5;
-    }
-  const inputGradeLinha = lin;
-const colunasGrade = inputGradeLinha * inputGradeLinha;
-for (let i = 0; i < inputGradeLinha; i += 1) {
-  linha();
-}
-for (let j = 0; j < colunasGrade; j += 1) {
-  linhaU();
-}
-// }
-// else if(boardSize.value > 0 && boardSize.value <= 50){
-// // console.log('antes', valorDoGerador, 'depois', valorNumericoDoGerador )
-// // let lin = Number(boardSize.value);
-// // return lin;
-// alert('Board Inválido 2')
-// }
-// else if(boardSize.value > 50) {
-// //   let lin = 50;
-// // return lin;
-// alert('Board Inválido 3')
-// }
-// else if(boardSize.value < 5) {
-//   // let lin = 5;
-//   // return lin;
-//   alert('Board Inválido 4')
-// }
-}
-}
-// Incompleto para os bonus
+//
 function linha() {
   // t
   const colorBoard = document.createElement('div');
@@ -117,30 +53,95 @@ function linhaU() {
   colorBoard.appendChild(pixelColor);
   pixelBoard.appendChild(colorBoard);
 }
+// Incompleto para os bonus
+function removeBoard() {
+  const visibles = document.querySelectorAll('#linha');
+  for (let i = 0; i < visibles.length; i += 1) {
+    visibles[i].remove();
+  }
+}
+//
+const boardSize = document.getElementById('board-size');
+// console.log(boardSize.value);
+// let valorDoGerador = boardSize.value;
+let lin = Number(boardSize.value);
+// para limpar o linter
+console.log(lin);
+//
+function visibleValidation() {
+  const visible = document.querySelectorAll('.visible');
+  for (let i = 0; i < visible.length; i += 1) {
+    visible[i].remove();
+  }
+}
+//
+function criandoBoard(inputGradeLinha, colunasGrade) {
+  for (let i = 0; i < inputGradeLinha; i += 1) {
+    linha();
+  }
+  for (let j = 0; j < colunasGrade; j += 1) {
+    linhaU();
+  }
+}
+//
+function validationBoard() {
+  if (boardSize.value > 0 && boardSize.value <= 50) {
+    removeBoard();
+    lin = Number(boardSize.value);
+  }
+  if (boardSize.value > 50) {
+    removeBoard();
+    lin = 50;
+  }
+  if (boardSize.value < 5) {
+    removeBoard();
+    lin = 5;
+  }
+}
+//
+//
+function boardValidation() {
+  visibleValidation();
+  if (boardSize.value === '') {
+    alert('Board Inválido!');
+  } else {
+    validationBoard();
+    const inputGradeLinha = lin;
+    const colunasGrade = inputGradeLinha * inputGradeLinha;
+    criandoBoard(inputGradeLinha, colunasGrade);
+  }
+}
+//
+// limpar o lint
+const valid = document.querySelector('#gBTest').addEventListener('click', boardValidation);
+// só pra limpar o lint
+console.log(valid);
+// console.log(boardValidation());
+// Incompleto para os bonus
 // separando
 // Incompleto para os bonus
 function linhaHidden() {
   // t
-  const colorBoard = document.createElement('div');
-  colorBoard.className = 'visible';
+  const colorBoardHidden = document.createElement('div');
+  colorBoardHidden.className = 'visible';
   // g
-  const pixelBoard = document.querySelector('#pixel-board');
-  pixelBoard.appendChild(colorBoard);
-  document.body.appendChild(pixelBoard);
+  const pixelBoardHidden = document.querySelector('.hidden');
+  pixelBoardHidden.appendChild(colorBoardHidden);
+  document.body.appendChild(pixelBoardHidden);
 }
 // Incompleto para os bonus
 function linhaUHidden() {
 // t
 // g
-  const pixelColor = document.createElement('div');
-  pixelColor.className = 'pixel';
-  pixelColor.onclick = function unnamedU() {
+  const pixelColorHidden = document.createElement('div');
+  pixelColorHidden.className = 'pixel';
+  pixelColorHidden.onclick = function unnamedU() {
     this.style.backgroundColor = pixelCores;
   };
-  const pixelBoard = document.querySelector('#pixel-board');
-  const colorBoard = document.querySelector('.visible');
-  colorBoard.appendChild(pixelColor);
-  pixelBoard.appendChild(colorBoard);
+  const pixelBoardHidden = document.querySelector('.hidden');
+  const colorBoardHidden = document.querySelector('.visible');
+  colorBoardHidden.appendChild(pixelColorHidden);
+  pixelBoardHidden.appendChild(colorBoardHidden);
 }
 //  imprimindo colunas
 const inputGradeLinhaHidden = 5;
