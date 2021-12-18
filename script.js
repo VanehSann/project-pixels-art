@@ -1,17 +1,28 @@
-// Cores das Paletas
+// Cores das Paletas - Adaptado e inspirado no link abaixo
+// https://wallacemaxters.com.br/blog/2021/02/20/como-gerar-cores-aleatorias-no-javascript
+function colorValidation() {
+  const r = parseInt(Math.random() * 255, 10);
+  const g = parseInt(Math.random() * 255, 10);
+  const b = parseInt(Math.random() * 255, 10);
+  return `rgb(${r},${g},${b})`;
+}
+const cor1 = colorValidation();
+const cor2 = colorValidation();
+const cor3 = colorValidation();
+
 // Primeira cor - Fixa - Cor preta [0]
 const priCard = document.querySelector('#priCard');
 priCard.style.backgroundColor = 'black';
 // Cores aleatorias + por enquanto serão predeterminadas
 // [1]
 const segCard = document.querySelector('#segCard');
-segCard.style.backgroundColor = 'yellow';
+segCard.style.backgroundColor = cor1;
 // [2]
 const tercCard = document.querySelector('#tercCard');
-tercCard.style.backgroundColor = 'green';
+tercCard.style.backgroundColor = cor2;
 // [3]
 const quatCard = document.querySelector('#quatCard');
-quatCard.style.backgroundColor = 'orange';
+quatCard.style.backgroundColor = cor3;
 // funcao das cores de baixo - inspirado e adaptado [ABAIXO]:
 // https://projects.raspberrypi.org/pt-PT/projects/pixel-art/4
 let pixelCores = 'black';
@@ -19,13 +30,13 @@ priCard.onclick = function unnamed() {
   pixelCores = 'black';
 };
 segCard.onclick = function unnamed() {
-  pixelCores = 'yellow';
+  pixelCores = cor1;
 };
 tercCard.onclick = function unnamed() {
-  pixelCores = 'green';
+  pixelCores = cor2;
 };
 quatCard.onclick = function unnamed() {
-  pixelCores = 'orange';
+  pixelCores = cor3;
 };
 //
 function linha() {
