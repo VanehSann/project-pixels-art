@@ -32,7 +32,7 @@
     <tr>
       <td><br>
         <p align="left">
-        Nesse projeto colocamos em prática o DOM ( Modelo de Objeto de Documento ), aonde podemos manipular Html, Css através do JavaScript. Criando seletores e eventos.</p>
+        Nesse projeto colocamos em prática o DOM ( Modelo de Objeto de Documento ), aonde podemos manipular HTML, CSS através do JavaScript. Criando seletores e eventos.</p>
       </td>
     </tr>
     <tr>
@@ -121,7 +121,7 @@ Layout
  <table>  
  <tr><td> 
      WEBSITE
- </td><td><img scr="./pixels-art.gif" /></td></tr>
+ </td><td><img scr="/pixels-art.gif" /></td></tr>
  <tr><td> 
  MOBILE
  </td></tr> 
