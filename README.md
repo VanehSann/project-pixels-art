@@ -32,7 +32,7 @@
     <tr>
       <td><br>
         <p align="left">
-        Nesse projeto colocamos em prática o DOM ( Modelo de Objeto de Documento ), aonde podemos manipular HTML, CSS através do JavaScript. Criando seletores e eventos.</p>
+        Nesse projeto colocamos em prática o DOM ( Modelo de Objeto de Documento ), aonde podemos manipular HTML, CSS através do JavaScript. Criando seletores e eventos. A proposta do projeto, é criar uma paleta de cores utilizando DOM, e podermos pintar essa paleta, apagar as cores pintadas e ainda escolher o tamanho de pixels exibidos na tela para colorir, e cada atualização de págica as cores mudam de forma aleatória, com execeção da cor padrão preta, que está presente em cada uma. Divertido né? </p>
       </td>
     </tr>
     <tr>
@@ -74,6 +74,10 @@
   </tr>
     <tr>
     <td> Adicionar no Github Pages</td>
+    <td>🟢</td>
+  </tr>
+     <tr>
+    <td> Melhorar CSS + Versão Mobile </td>
     <td>🟢</td>
   </tr>
   <tr>
