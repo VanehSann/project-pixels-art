@@ -121,7 +121,7 @@ Layout
  <table>  
  <tr><td> 
      WEBSITE
- </td><td><img scr="/pixels-art.gif" /></td></tr>
+ </td><td><img scr="./pixels-art.gif" /></td></tr>
  <tr><td> 
  MOBILE
  </td></tr> 
